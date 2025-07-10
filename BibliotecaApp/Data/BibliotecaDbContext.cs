@@ -1,10 +1,10 @@
 // Data/LibraryDbContext.cs
 using Microsoft.EntityFrameworkCore;
-using LibraryAppSqlServer.Models; // Ajuste o namespace
+using BibliotecaDbContext.Models; // Ajuste o namespace
 
-namespace LibraryAppSqlServer.Data // Ajuste o namespace
+namespace BibliotecaDbContext.Data // Ajuste o namespace
 {
-    public class LibraryDbContext : DbContext
+    public class BibliotecaDbContext : DbContext
     {
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Autor> Autores { get; set; }
@@ -12,7 +12,7 @@ namespace LibraryAppSqlServer.Data // Ajuste o namespace
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // !!! MUDE ESTA STRING DE CONEXÃO PARA A DO SEU SQL SERVER !!!
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=LibraryAppDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=BibliotecaDb;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
