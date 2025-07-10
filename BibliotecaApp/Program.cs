@@ -1,11 +1,11 @@
 ﻿// Program.cs
-using LibraryAppSqlServer.Data; // Ajuste o namespace
-using LibraryAppSqlServer.Models; // Ajuste o namespace
+using BibliotecaDbContext.Data; // Ajuste o namespace
+using BibliotecaDbContext.Models; // Ajuste o namespace
 using Microsoft.EntityFrameworkCore; // Importante para .Include()
 
 Console.WriteLine("--- Aplicação de Biblioteca com EF Core (SQL Server) ---");
 
-using (var dbContext = new LibraryDbContext())
+using (var dbContext = new BibliotecaDbContext())
 {
     // Opcional: Se quiser recriar o banco a cada execução (útil para testes)
     // dbContext.Database.EnsureDeleted();
