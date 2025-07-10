@@ -66,9 +66,9 @@ namespace BibliotecaApp.Migrations
                     b.ToTable("Livros");
                 });
 
-            modelBuilder.Entity("LibraryAppSqlServer.Models.Livro", b =>
+            modelBuilder.Entity("BibliotecaDbContext.Models.Livro", b =>
                 {
-                    b.HasOne("LibraryAppSqlServer.Models.Autor", "Autor")
+                    b.HasOne("BibliotecaDbContext.Models.Autor", "Autor")
                         .WithMany("Livros")
                         .HasForeignKey("AutorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -77,7 +77,7 @@ namespace BibliotecaApp.Migrations
                     b.Navigation("Autor");
                 });
 
-            modelBuilder.Entity("LibraryAppSqlServer.Models.Autor", b =>
+            modelBuilder.Entity("BibliotecaDbContext.Models.Autor", b =>
                 {
                     b.Navigation("Livros");
                 });
