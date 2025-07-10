@@ -1,7 +1,7 @@
 // Models/Autor.cs
 using System.Collections.Generic;
 
-namespace LibraryAppSqlServer.Models
+namespace BibliotecaDbContext.Models
 {
     public class Autor
     {
