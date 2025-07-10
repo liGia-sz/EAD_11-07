@@ -1,5 +1,5 @@
 // Models/Livro.cs
-namespace LibraryAppSqlServer.Models
+namespace BibliotecaDbContext.Models
 {
     public class Livro
     {
