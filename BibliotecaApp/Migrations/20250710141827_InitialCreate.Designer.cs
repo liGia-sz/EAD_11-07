@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BibliotecaApp.Migrations
 {
-    [DbContext(typeof(LibraryDbContext))]
+    [DbContext(typeof(BibliotecaDbContext))]
     [Migration("20250710141827_InitialCreate")]
     partial class InitialCreate
     {
@@ -24,7 +24,7 @@ namespace BibliotecaApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LibraryAppSqlServer.Models.Autor", b =>
+            modelBuilder.Entity("BibliotecaDbContext.Models.Autor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace BibliotecaApp.Migrations
                     b.ToTable("Autores");
                 });
 
-            modelBuilder.Entity("LibraryAppSqlServer.Models.Livro", b =>
+            modelBuilder.Entity("BibliotecaDbContext.Models.Livro", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
